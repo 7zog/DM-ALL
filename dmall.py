@@ -33,7 +33,7 @@ async def dm(ctx, *, message: str):
             await member.send(message)
             sent += 1
             print(f"[✅] Envoyé à {member} ({idx}/{total})")
-            await asyncio.sleep(1)  # Pause standard pour éviter ratelimit
+            await asyncio.sleep(1)
         except discord.errors.Forbidden:
             failed += 1
             print(f"[❌] Impossible d'envoyer à {member} (DM désactivés) ({failed} échecs)")
